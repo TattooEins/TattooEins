@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">TattooEins by Mojtaba Shokoohi</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Center alignment for all sections */
+        .container > section {
+            text-align: center;
+        }
+        .carousel-inner{
+            width: 70%;
+            margin: 0 auto;
+        }
+        .carousel-inner .carousel-item img {
+            margin: 0 auto; /* Center images in carousel */
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">TattooEins</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active mx-2">
+                <a class="nav-link" href="#home" id="homeLink">Home</a>
+            </li>
+            <li class="nav-item mx-2">
+                <a class="nav-link" href="#ideasLab" id="ideasLabLink">Ideas Lab</a>
+            </li>
+            <li class="nav-item mx-2">
+                <a class="nav-link" href="#contact" id="contactLink">Contact</a>
+            </li>
+            <li class="nav-item dropdown mx-2">
+                <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Language
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#" onclick="changeLanguage('en')">English</a>
+                    <a class="dropdown-item" href="#" onclick="changeLanguage('tr')">Türkçe</a>
+                    <a class="dropdown-item" href="#" onclick="changeLanguage('fa')">فارسی</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<div class="container mt-4">
+    <section id="home">
+        <h1 class="display-4" id="welcomeText">Welcome to TattooEins</h1>
+        <p id="descriptionText">Experience the art of Mojtaba Shokoohi.</p>
+        <a href="#ideasLab" class="btn btn-dark" id="seeIdeasButton">Explore Ideas</a>
+    </section>
+
+    <!-- Ideas Lab Section -->
+    <section id="ideasLab" class="mt-5">
+        <h2 id="ideasLabHeader">Ideas Lab</h2>
+        <p id="ideasLabDescription">Discover a gallery of tattoo ideas to spark your imagination.</p>
+        <div class="row ideas-scroll">
+            <div class="col-12">
+                <div class="carousel slide" id="ideasCarousel" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="card carousel-card">
+                                <img src="images/idea1.jpg" class="card-img-top" alt="Tattoo Idea 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Design Code: IDEA-001</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card carousel-card">
+                                <img src="images/idea2.jpg" class="card-img-top" alt="Tattoo Idea 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Design Code: IDEA-002</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add more carousel items here with their unique design codes -->
+                    </div>
+                    <a class="carousel-control-prev" href="#ideasCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#ideasCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="mt-5">
+        <h2 id="bookSessionHeader">Book Your Session</h2>
+        <button onclick="openWhatsApp()" class="btn btn-primary my-4" id="bookNowButton">Book Now</button>
+    </section>
+</div>
+
+<!-- Sophisticated Footer -->
+<footer class="footer bg-dark text-light mt-5">
+    <div class="container">
+        <div class="row py-4">
+            <div class="col-md-4 mx-auto">
+                <h5 id="footerAbout">About TattooEins</h5>
+                <p id="footerAboutText">TattooEins is where art meets skin. Explore the unique tattoos crafted by Mojtaba Shokoohi.</p>
+            </div>
+            <div class="col-md-4 mx-auto">
+                <h5 id="footerContact">Contact Us</h5>
+                <p id="footerContactText">Feel free to reach out for any inquiries or to book a session.</p>
+                <button onclick="openWhatsApp()" class="btn btn-outline-light my-3" id="footerBookNow">Book Now</button>
+            </div>
+            <div class="col-md-4 mx-auto">
+                <h5 id="footerFollow">Follow Us</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-light" id="footerInstagram">Instagram</a></li>
+                    <!-- Add more social links as needed -->
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <p id="footerCopyright">© 2023 TattooEins. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="assets/js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
