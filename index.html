@@ -11,10 +11,12 @@
     <style>
         /* General adjustments for mobile */
         body {
+            text-align: center;
             font-size: 16px;
         }
         @media (max-width: 767px) {
             body {
+                text-align: center;
                 font-size: 14px;
             }
             h1, h2 {
@@ -26,14 +28,20 @@
             
             /* Navbar adjustments */
             .navbar {
-                padding: 0;
+                padding: 0.5rem 1rem; /* Add padding to the navbar itself */
             }
             .navbar-brand {
                 font-size: 1.1em;
+                padding-left: 0; /* Remove left padding if sticking to the left */
+            }
+            .navbar-toggler {
+                padding: 0.25rem 0.75rem; /* Adjust padding for the menu icon */
+            }
+            .navbar-collapse {
+                padding-right: 0; /* Remove right padding if sticking to the right */
             }
             .navbar-nav {
-                flex-direction: row;
-                justify-content: space-around;
+                flex-direction: column; /* Stack items vertically for better mobile view */
                 width: 100%;
             }
             .nav-item {
@@ -68,7 +76,7 @@
             .btn {
                 width: 100%;
                 max-width: 250px;
-                margin: 10px auto;
+                margin: 20px auto;
                 display: block;
             }
             
