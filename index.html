@@ -9,63 +9,62 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
-        /* Adjust carousel for responsiveness */
-        .carousel-inner {
-            width: 100%;
-            margin: 0 auto;
-        }
-        
-        .carousel-card {
-            max-width: 100%; /* Full width on mobile */
-            width: auto;
-            margin: 0 auto; /* Center the card */
-        }
-        
-        /* Ensure images scale appropriately */
-        .carousel-inner .carousel-item img {
-            max-width: 100%;
-            height: auto;
-            display: block; /* Prevents extra space below images */
-        }
-
-        /* Make sure buttons fit on mobile */
-        .btn {
-            width: 100%;
-            max-width: 300px; /* Ensure buttons don't stretch too wide on bigger screens */
-        }
-
-        /* Responsive text alignment */
-        @media (max-width: 767px) {
-            .container > section {
-                text-align: center; /* Changed to center for better mobile experience */
-            }
-            .navbar-nav {
-                text-align: center; /* Center nav items in mobile */
-            }
-            .nav-item {
-                margin: 10px 0; /* Add some vertical spacing for nav items */
-            }
-        }
-        
-        /* Footer adjustments */
-        .footer .row {
-            flex-direction: column; /* Stack columns on small screens */
-        }
-        
-        .footer .col-md-4 {
-            margin-bottom: 20px; /* Space between columns in mobile view */
-        }
-
-        /* General text size for mobile */
+        /* Responsive adjustments for mobile */
         body {
             font-size: 16px;
         }
         @media (max-width: 767px) {
             body {
+                text-align: center;
                 font-size: 14px;
             }
             h1, h2 {
-                font-size: 1.5em; /* Adjust heading size for smaller screens */
+                font-size: 1.5em;
+            }
+            .container {
+                padding: 0 15px; /* Reduce padding on small screens to fit content */
+            }
+            
+            /* Navbar adjustments */
+            .navbar-nav {
+                text-align: center;
+            }
+            .nav-item {
+                margin: 10px 0;
+            }
+            
+            /* Carousel adjustments */
+            .carousel-card {
+                margin: 0 auto;
+                width: 100%;
+            }
+            .carousel-inner {
+                padding: 0;
+            }
+            .carousel-item img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+            }
+            
+            /* Button adjustments */
+            .btn {
+                width: 100%;
+                max-width: 250px;
+                margin: 0 auto;
+                display: block;
+            }
+            
+            /* Footer adjustments */
+            footer .row {
+                flex-direction: column;
+            }
+            footer .col-md-4 {
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            footer ul {
+                padding: 0;
             }
         }
     </style>
@@ -106,7 +105,7 @@
 <!-- Main Content -->
 <div class="container mt-4">
     <section id="home">
-        <h1 class="display-4" id="welcomeText">Welcome to TattooEins</h1>
+        <h1 id="welcomeText">Welcome to TattooEins</h1>
         <p id="descriptionText">Experience the art of Mojtaba Shokoohi.</p>
         <a href="#ideasLab" class="btn btn-dark" id="seeIdeasButton">Explore Ideas</a>
     </section>
@@ -115,13 +114,13 @@
     <section id="ideasLab" class="mt-5">
         <h2 id="ideasLabHeader">Ideas Lab</h2>
         <p id="ideasLabDescription">Discover a gallery of tattoo ideas to spark your imagination.</p>
-        <div class="row ideas-scroll">
+        <div class="row">
             <div class="col-12">
                 <div class="carousel slide" id="ideasCarousel" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="card carousel-card">
-                                <img src="images/idea1.jpg" class="card-img-top" alt="Tattoo Idea 1">
+                                <img src="images/idea1.png" class="card-img-top" alt="Tattoo Idea 1">
                                 <div class="card-body">
                                     <h5 class="card-title">Design Code: IDEA-001</h5>
                                 </div>
@@ -152,7 +151,7 @@
 
     <section id="contact" class="mt-5">
         <h2 id="bookSessionHeader">Book Your Session</h2>
-        <button onclick="openWhatsApp()" class="btn btn-primary my-4" id="bookNowButton">Book Now</button>
+        <button onclick="openWhatsApp()" class="btn btn-primary" id="bookNowButton">Book Now</button>
     </section>
 </div>
 
@@ -167,7 +166,7 @@
             <div class="col-12 col-md-4">
                 <h5 id="footerContact">Contact Us</h5>
                 <p id="footerContactText">Feel free to reach out for any inquiries or to book a session.</p>
-                <button onclick="openWhatsApp()" class="btn btn-outline-light my-3" id="footerBookNow">Book Now</button>
+                <button onclick="openWhatsApp()" class="btn btn-outline-light" id="footerBookNow">Book Now</button>
             </div>
             <div class="col-12 col-md-4">
                 <h5 id="footerFollow">Follow Us</h5>
