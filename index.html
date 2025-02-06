@@ -7,30 +7,42 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
     <style>
-        /* Responsive adjustments for mobile */
+        /* General adjustments for mobile */
         body {
             font-size: 16px;
         }
         @media (max-width: 767px) {
             body {
-                text-align: center;
                 font-size: 14px;
             }
             h1, h2 {
-                font-size: 1.5em;
+                font-size: 1.25em;
             }
             .container {
-                padding: 0 15px; /* Reduce padding on small screens to fit content */
+                padding: 0 10px;
             }
             
             /* Navbar adjustments */
+            .navbar {
+                padding: 0;
+            }
+            .navbar-brand {
+                font-size: 1.1em;
+            }
             .navbar-nav {
-                text-align: center;
+                flex-direction: row;
+                justify-content: space-around;
+                width: 100%;
             }
             .nav-item {
-                margin: 10px 0;
+                margin: 0;
+            }
+            .nav-link {
+                padding: 0.5rem 0;
+                font-size: 0.9em;
+                text-align: center;
             }
             
             /* Carousel adjustments */
@@ -42,29 +54,55 @@
                 padding: 0;
             }
             .carousel-item img {
-                max-width: 100%;
                 height: auto;
+                max-width: 100%;
                 display: block;
+            }
+            .carousel-control-prev-icon, .carousel-control-next-icon {
+                height: 30px;
+                width: 30px;
+                background-size: 100% 100%;
             }
             
             /* Button adjustments */
             .btn {
                 width: 100%;
                 max-width: 250px;
-                margin: 0 auto;
+                margin: 10px auto;
                 display: block;
             }
             
             /* Footer adjustments */
+            footer .container {
+                padding: 0 5px;
+            }
             footer .row {
                 flex-direction: column;
             }
             footer .col-md-4 {
                 margin-bottom: 20px;
-                text-align: center;
+            }
+            footer h5 {
+                font-size: 1em;
+            }
+            footer p {
+                font-size: 0.9em;
             }
             footer ul {
                 padding: 0;
+            }
+            footer .btn {
+                margin: 10px auto;
+                max-width: 200px;
+            }
+            
+            /* General spacing */
+            .mt-4, .mt-5 {
+                margin-top: 1rem !important;
+            }
+            .my-4 {
+                margin-top: 1rem !important;
+                margin-bottom: 1rem !important;
             }
         }
     </style>
