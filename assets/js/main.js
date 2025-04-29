@@ -53,8 +53,8 @@ function updatePageContent() {
     // Page-specific elements
     const pagePath = window.location.pathname;
     if (pagePath.includes('index.html') || pagePath === '/') {
-        updateElement('welcomeText', 'welcome');
-        updateElement('descriptionText', 'description');
+        updateElement('welcomeText', 'welcomeText');
+        updateElement('descriptionText', 'descriptionText');
         updateElement('portfolioHeader', 'portfolioHeader');
         updateElement('portfolioDescription', 'portfolioDescription');
         updateElement('seePortfolioButton', 'seePortfolioButton');
