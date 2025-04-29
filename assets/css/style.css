@@ -1,0 +1,195 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    font-size: 16px;
+}
+
+.navbar {
+    background-color: #000 !important;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand,
+.nav-link {
+    color: #fff !important;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+.btn-dark {
+    background-color: #333;
+    border: none;
+    width: 100%;
+    max-width: 200px;
+    margin: 10px auto;
+    display: block;
+}
+
+.btn-dark:hover {
+    background-color: #555;
+}
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+}
+
+/* Ensure responsive images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Carousel card styling */
+.carousel-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 100%;
+    margin: 0 auto;
+    width: 100%; /* Ensure card takes full width of its container */
+}
+
+/* Carousel specific */
+.carousel-inner {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    max-height: 300px;
+    object-fit: contain;
+    width: 100%; /* Ensure image fills card width */
+}
+
+/* Ensure carousel card body scales with image */
+.carousel-card .card-body {
+    padding: 10px;
+    text-align: center;
+}
+
+.carousel-card .card-text,
+.carousel-card .card-title {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.carousel-card .btn-dark {
+    font-size: 0.8em;
+    padding: 8px 12px;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h5 {
+        font-size: 1em;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .navbar {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.1em;
+        padding-left: 10px;
+    }
+
+    .navbar-toggler {
+        padding: 0.25rem 0.5rem;
+        margin-right: 10px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-item {
+        margin: 5px 0;
+    }
+
+    .nav-link {
+        font-size: 0.9em;
+    }
+
+    .carousel-card {
+        max-width: 90%;
+    }
+
+    .carousel-caption {
+        font-size: 0.7em;
+        padding: 5px;
+    }
+
+    .carousel-item img {
+        max-height: 200px;
+    }
+
+    .carousel-card .card-body {
+        padding: 8px;
+    }
+
+    .carousel-card .card-text,
+    .carousel-card .card-title {
+        font-size: 0.8em;
+    }
+
+    .carousel-card .btn-dark {
+        font-size: 0.7em;
+        max-width: 150px;
+        padding: 6px 10px;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .footer .row {
+        flex-direction: column;
+    }
+
+    .footer .col-md-4 {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .footer h5 {
+        font-size: 1em;
+    }
+
+    .footer p {
+        font-size: 0.9em;
+    }
+
+    .mt-4,
+    .mt-5 {
+        margin-top: 1rem !important;
+    }
+
+    .my-4 {
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+}
