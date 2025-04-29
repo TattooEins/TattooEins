@@ -4,6 +4,10 @@ body {
     background-color: #f8f9fa;
     color: #333;
     font-size: 16px;
+    margin: 0; /* Remove default body margin */
+    min-height: 100vh; /* Ensure body fills viewport height */
+    display: flex;
+    flex-direction: column;
 }
 
 .navbar {
@@ -39,6 +43,7 @@ body {
     background-color: #000;
     color: #fff;
     padding: 20px 0;
+    margin-top: auto; /* Push footer to bottom of flex container */
 }
 
 /* Ensure responsive images */
@@ -54,7 +59,7 @@ img {
     border-radius: 8px;
     max-width: 100%;
     margin: 0 auto;
-    width: 100%; /* Ensure card takes full width of its container */
+    width: 100%;
 }
 
 /* Carousel specific */
@@ -66,7 +71,7 @@ img {
 .carousel-item img {
     max-height: 300px;
     object-fit: contain;
-    width: 100%; /* Ensure image fills card width */
+    width: 100%;
 }
 
 /* Ensure carousel card body scales with image */
@@ -102,6 +107,7 @@ img {
 
     .container {
         padding: 0 15px;
+        margin-bottom: 0; /* Remove bottom margin */
     }
 
     .navbar {
@@ -166,8 +172,13 @@ img {
         height: 20px;
     }
 
+    .footer {
+        padding: 15px 0; /* Reduce padding on mobile */
+    }
+
     .footer .row {
         flex-direction: column;
+        margin-bottom: 0; /* Remove bottom margin */
     }
 
     .footer .col-md-4 {
@@ -191,5 +202,10 @@ img {
     .my-4 {
         margin-top: 1rem !important;
         margin-bottom: 1rem !important;
+    }
+
+    /* Remove extra space below footer */
+    .footer + * {
+        display: none; /* Hide any unexpected elements after footer */
     }
 }
