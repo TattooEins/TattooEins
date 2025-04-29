@@ -5,7 +5,6 @@ let translations = {};
 // Function to load translations from JSON
 async function loadTranslations(lang) {
     try {
-        console.log("loadTranslations");
         const response = await fetch(`languages/${lang}.json`);
         translations = await response.json();
         currentLanguage = lang;
@@ -36,28 +35,47 @@ function updatePageContent() {
         }
     };
 
+    // Common elements across pages
     updateElement('pageTitle', 'title');
     updateElement('homeLink', 'home');
-    updateElement('ideasLabLink', 'ideasLab'); // New link for Ideas Lab
-    updateElement('contactLink', 'contact');
+    updateElement('portfolioLink', 'portfolio');
+    updateElement('ideasLink', 'ideas');
     updateElement('languageDropdown', 'language');
-    updateElement('welcomeText', 'welcome');
-    updateElement('descriptionText', 'description');
-    updateElement('seeIdeasButton', 'seeIdeas'); // Updated from seeWork
-    updateElement('ideasLabHeader', 'ideasLabHeader');
-    updateElement('ideasLabDescription', 'ideasLabDescription');
-    updateElement('bookSessionHeader', 'bookSession');
-    updateElement('bookNowButton', 'bookNow');
-    
-    // Update footer elements
     updateElement('footerAbout', 'footerAbout');
     updateElement('footerAboutText', 'footerAboutText');
     updateElement('footerContact', 'footerContact');
     updateElement('footerContactText', 'footerContactText');
-    updateElement('footerBookNow', 'bookNow'); // Use same translation as bookNowButton
+    updateElement('footerBookNow', 'bookNow');
     updateElement('footerFollow', 'footerFollow');
     updateElement('footerInstagram', 'footerInstagram');
     updateElement('footerCopyright', 'footerCopyright');
+
+    // Page-specific elements
+    const pagePath = window.location.pathname;
+    if (pagePath.includes('index.html') || pagePath === '/') {
+        updateElement('welcomeText', 'welcome');
+        updateElement('descriptionText', 'description');
+        updateElement('portfolioHeader', 'portfolioHeader');
+        updateElement('portfolioDescription', 'portfolioDescription');
+        updateElement('seePortfolioButton', 'seePortfolioButton');
+        updateElement('ideasHeader', 'ideasHeader');
+        updateElement('ideasDescription', 'ideasDescription');
+        updateElement('seeIdeasButton', 'seeIdeasButton');
+    } else if (pagePath.includes('portfolio.html')) {
+        updateElement('portfolioHeader', 'portfolioHeader');
+        updateElement('portfolioDescription', 'portfolioDescription');
+        updateElement('portfolioItem1Desc', 'portfolioItem1Desc');
+        updateElement('portfolioItem1Button', 'portfolioItem1Button');
+        updateElement('portfolioItem2Desc', 'portfolioItem2Desc');
+        updateElement('portfolioItem2Button', 'portfolioItem2Button');
+    } else if (pagePath.includes('ideas.html')) {
+        updateElement('ideasHeader', 'ideasHeader');
+        updateElement('ideasDescription', 'ideasDescription');
+        updateElement('idea1Desc', 'idea1Desc');
+        updateElement('idea1Button', 'idea1Button');
+        updateElement('idea2Desc', 'idea2Desc');
+        updateElement('idea2Button', 'idea2Button');
+    }
 }
 
 // Change language handler
