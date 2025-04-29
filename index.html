@@ -13,7 +13,7 @@
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="index.html">TattooEins</a>
+    <a class="navbar-brand" href="#">TattooEins</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -33,9 +33,9 @@
                     Language
                 </a>
                 <div class="dropdown-menu" aria-labelledby="languageDropdown">
-                    <a class="dropdown-item" href="#" onclick="changeLanguage('en')">English</a>
-                    <a class="dropdown-item" href="#" onclick="changeLanguage('tr')">Türkçe</a>
-                    <a class="dropdown-item" href="#" onclick="changeLanguage('fa')">فارسی</a>
+                    <a class="dropdown-item" href="javascript:void(0)" onclick="changeLanguage('en')">English</a>
+                    <a class="dropdown-item" href="javascript:void(0)" onclick="changeLanguage('tr')">Türkçe</a>
+                    <a class="dropdown-item" href="javascript:void(0)" onclick="changeLanguage('fa')">فارسی</a>
                 </div>
             </li>
         </ul>
@@ -45,8 +45,8 @@
 <!-- Main Content -->
 <div class="container mt-4">
     <section id="home">
-        <h1 class="display-4 text-center" id="welcomeText">Welcome to TattooEins</h1>
-        <p class="text-center" id="descriptionText">Experience the art of Mojtaba Shokoohi.</p>
+        <h1 class="text-center" id="welcomeText" style="font-size: 2.5rem;">Welcome to TattooEins</h1>
+        <p class="text-center" id="descriptionText" style="font-size: 1.2rem;">Experience the art of Mojtaba Shokoohi.</p>
         
         <!-- Carousel -->
         <div id="homeCarousel" class="carousel slide" data-ride="carousel">
@@ -77,6 +77,23 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+    </section>
+
+    <!-- About the Artist -->
+    <section id="about" class="mt-5">
+        <h2 class="text-center" id="aboutHeader">About Mojtaba Shokoohi</h2>
+        <p class="text-center" id="aboutText">Mojtaba Shokoohi is a renowned tattoo artist with over 10 years of experience. His unique style blends traditional and modern techniques to create stunning, personalized tattoos.</p>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-choose-us" class="mt-5">
+        <h2 class="text-center" id="whyChooseUsHeader">Why Choose TattooEins?</h2>
+        <ul class="list-unstyled text-center" id="whyChooseUsText">
+            <li>Expertise in custom tattoo designs</li>
+            <li>High-quality, sterile equipment</li>
+            <li>Comfortable and welcoming studio environment</li>
+            <li>Personalized consultations for every client</li>
+        </ul>
     </section>
 </div>
 

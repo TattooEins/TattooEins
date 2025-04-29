@@ -61,20 +61,36 @@ function updatePageContent() {
         updateElement('ideasHeader', 'ideasHeader');
         updateElement('ideasDescription', 'ideasDescription');
         updateElement('seeIdeasButton', 'seeIdeasButton');
+        updateElement('aboutHeader', 'aboutHeader');
+        updateElement('aboutText', 'aboutText');
+        updateElement('whyChooseUsHeader', 'whyChooseUsHeader');
+        // Note: whyChooseUsText is a list, handled differently if needed
     } else if (pagePath.includes('portfolio.html')) {
         updateElement('portfolioHeader', 'portfolioHeader');
         updateElement('portfolioDescription', 'portfolioDescription');
-        updateElement('portfolioItem1Desc', 'portfolioItem1Desc');
-        updateElement('portfolioItem1Button', 'portfolioItem1Button');
-        updateElement('portfolioItem2Desc', 'portfolioItem2Desc');
-        updateElement('portfolioItem2Button', 'portfolioItem2Button');
+        updateElement('traditionalTattoosHeader', 'traditionalTattoosHeader');
+        updateElement('traditionalItem1Desc', 'traditionalItem1Desc');
+        updateElement('traditionalItem1Button', 'traditionalItem1Button');
+        updateElement('traditionalItem2Desc', 'traditionalItem2Desc');
+        updateElement('traditionalItem2Button', 'traditionalItem2Button');
+        updateElement('modernTattoosHeader', 'modernTattoosHeader');
+        updateElement('modernItem1Desc', 'modernItem1Desc');
+        updateElement('modernItem1Button', 'modernItem1Button');
+        updateElement('modernItem2Desc', 'modernItem2Desc');
+        updateElement('modernItem2Button', 'modernItem2Button');
     } else if (pagePath.includes('ideas.html')) {
         updateElement('ideasHeader', 'ideasHeader');
         updateElement('ideasDescription', 'ideasDescription');
-        updateElement('idea1Desc', 'idea1Desc');
-        updateElement('idea1Button', 'idea1Button');
-        updateElement('idea2Desc', 'idea2Desc');
-        updateElement('idea2Button', 'idea2Button');
+        updateElement('minimalistDesignsHeader', 'minimalistDesignsHeader');
+        updateElement('minimalistItem1Desc', 'minimalistItem1Desc');
+        updateElement('minimalistItem1Button', 'minimalistItem1Button');
+        updateElement('minimalistItem2Desc', 'minimalistItem2Desc');
+        updateElement('minimalistItem2Button', 'minimalistItem2Button');
+        updateElement('tribalDesignsHeader', 'tribalDesignsHeader');
+        updateElement('tribalItem1Desc', 'tribalItem1Desc');
+        updateElement('tribalItem1Button', 'tribalItem1Button');
+        updateElement('tribalItem2Desc', 'tribalItem2Desc');
+        updateElement('tribalItem2Button', 'tribalItem2Button');
     }
 }
 

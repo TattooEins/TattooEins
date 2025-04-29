@@ -11,7 +11,7 @@
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="index.html">TattooEins</a>
+    <a class="navbar-brand" href="#">TattooEins</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -31,9 +31,9 @@
                     Language
                 </a>
                 <div class="dropdown-menu" aria-labelledby="languageDropdown">
-                    <a class="dropdown-item" href="#" onclick="changeLanguage('en')">English</a>
-                    <a class="dropdown-item" href="#" onclick="changeLanguage('tr')">Türkçe</a>
-                    <a class="dropdown-item" href="#" onclick="changeLanguage('fa')">فارسی</a>
+                    <a class="dropdown-item" href="javascript:void(0)" onclick="changeLanguage('en')">English</a>
+                    <a class="dropdown-item" href="javascript:void(0)" onclick="changeLanguage('tr')">Türkçe</a>
+                    <a class="dropdown-item" href="javascript:void(0)" onclick="changeLanguage('fa')">فارسی</a>
                 </div>
             </li>
         </ul>
@@ -45,32 +45,68 @@
     <section id="portfolio">
         <h1 class="text-center" id="portfolioHeader">Portfolio</h1>
         <p class="text-center" id="portfolioDescription">Explore tattoos crafted by Mojtaba Shokoohi.</p>
-        <div class="carousel slide" id="portfolioCarousel" data-ride="carousel">
+
+        <!-- Traditional Tattoos Carousel -->
+        <h3 class="text-center mt-5" id="traditionalTattoosHeader">Traditional Tattoos</h3>
+        <div class="carousel slide" id="traditionalTattoosCarousel" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="card carousel-card">
-                        <img src="images/portfolio1.jpg" class="card-img-top" alt="Tattoo 1">
+                        <img src="images/traditional1.jpg" class="card-img-top" alt="Traditional Tattoo 1">
                         <div class="card-body">
-                            <p class="card-text" id="portfolioItem1Desc">A bold lion tattoo on the forearm.</p>
-                            <a href="https://wa.me/+905527473071?text=Interested%20in%20the%20lion%20tattoo" class="btn btn-dark" id="portfolioItem1Button">Inquire via WhatsApp</a>
+                            <p class="card-text" id="traditionalItem1Desc">A classic anchor tattoo on the chest.</p>
+                            <a href="https://wa.me/+905527473071?text=Interested%20in%20the%20anchor%20tattoo" class="btn btn-dark" id="traditionalItem1Button">Inquire via WhatsApp</a>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="card carousel-card">
-                        <img src="images/portfolio2.jpg" class="card-img-top" alt="Tattoo 2">
+                        <img src="images/traditional2.jpg" class="card-img-top" alt="Traditional Tattoo 2">
                         <div class="card-body">
-                            <p class="card-text" id="portfolioItem2Desc">A delicate floral sleeve design.</p>
-                            <a href="https://wa.me/+905527473071?text=Interested%20in%20the%20floral%20tattoo" class="btn btn-dark" id="portfolioItem2Button">Inquire via WhatsApp</a>
+                            <p class="card-text" id="traditionalItem2Desc">A vibrant rose tattoo on the arm.</p>
+                            <a href="https://wa.me/+905527473071?text=Interested%20in%20the%20rose%20tattoo" class="btn btn-dark" id="traditionalItem2Button">Inquire via WhatsApp</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#portfolioCarousel" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#traditionalTattoosCarousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#portfolioCarousel" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#traditionalTattoosCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <!-- Modern Tattoos Carousel -->
+        <h3 class="text-center mt-5" id="modernTattoosHeader">Modern Tattoos</h3>
+        <div class="carousel slide" id="modernTattoosCarousel" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="card carousel-card">
+                        <img src="images/modern1.jpg" class="card-img-top" alt="Modern Tattoo 1">
+                        <div class="card-body">
+                            <p class="card-text" id="modernItem1Desc">A geometric wolf tattoo on the back.</p>
+                            <a href="https://wa.me/+905527473071?text=Interested%20in%20the%20wolf%20tattoo" class="btn btn-dark" id="modernItem1Button">Inquire via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card carousel-card">
+                        <img src="images/modern2.jpg" class="card-img-top" alt="Modern Tattoo 2">
+                        <div class="card-body">
+                            <p class="card-text" id="modernItem2Desc">A minimalist skyline tattoo on the wrist.</p>
+                            <a href="https://wa.me/+905527473071?text=Interested%20in%20the%20skyline%20tattoo" class="btn btn-dark" id="modernItem2Button">Inquire via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#modernTattoosCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#modernTattoosCarousel" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
